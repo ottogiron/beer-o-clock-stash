@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+  <plugin-info>
+    <description>${project.description}</description>
+    <version>${project.version}</version>
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+    <param name="plugin-icon">images/pluginIcon.png</param>
+    <param name="plugin-logo">images/pluginLogo.png</param>
+  </plugin-info>
+  
+  <repository-hook name="Beer O Clock Hook" i18n-name-key="beer-o-clock-hook.name" key="beer-o-clock-hook" class="com.jumlabs.test.hook.BeerOClockHook">
+  </repository-hook>
+</atlassian-plugin>
