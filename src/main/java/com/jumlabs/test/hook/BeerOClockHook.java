@@ -16,7 +16,7 @@ public class BeerOClockHook implements PreReceiveRepositoryHook
     {
         Calendar now = Calendar.getInstance();
         boolean isFriday = now.get(Calendar.DAY_OF_WEEK) == Calendar.FRIDAY;
-        boolean isAfter4pm = now.get(Calendar.HOUR_OF_DAY) > 16;
+        boolean isAfter4pm = now.get(Calendar.HOUR_OF_DAY) >= 16;
         if(isFriday && isAfter4pm) {
             hookResponse.err().println("Sorry mate, you can't push changes after 4pm on Friday");
             return false;
